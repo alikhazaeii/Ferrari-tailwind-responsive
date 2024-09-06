@@ -1,0 +1,324 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes ferrari-logo {
+  to {
+    /* transform: translateY(-100%); */
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.logo {
+  animation: ferrari-logo 1s 1s forwards linear;
+}
+
+/*- ************** start 3 video**************** */
+
+@keyframes vid1 {
+
+  from,
+  30% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+  35.111%,
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+}
+
+@keyframes vid2 {
+
+  from,
+  30% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  35.111%,
+  60% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes vid3 {
+
+  from,
+  60% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  65.111%,
+  95.1% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.vid {
+  :nth-of-type(1) {
+    animation: vid1 8s linear infinite;
+  }
+
+  :nth-of-type(2) {
+    animation: vid2 8s linear infinite;
+  }
+
+  :nth-of-type(3) {
+    animation: vid3 8s linear infinite;
+  }
+
+}
+
+/* ************************video*************************** */
+
+/* @keyframes sec1 {
+  to{
+    transform: translateX(-20%);
+  }
+}
+.sec1{
+  animation: sec1 10s linear;
+}
+@keyframes sec2 {
+  to{
+    transform: translateX(-50%);
+  }
+}
+.sec1{
+  animation: sec1 10s linear;
+}
+@keyframes sec3 {
+  to{
+    transform: translateX(-0%);
+  }
+}
+.sec1{
+  animation: sec1 10s linear;
+} */
+@keyframes sec1 {
+
+  from,
+  30% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+  35.111%,
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+}
+
+@keyframes sec2 {
+
+  from,
+  30% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  35.111%,
+  60% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  70% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes sec3 {
+
+  from,
+  65% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  75.111%,
+  95.1% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.sec1 {
+  animation: sec1 8s linear infinite;
+
+}
+
+.sec2 {
+  animation: sec2 8s linear infinite;
+
+}
+
+.sec3 {
+  animation: sec3 8s linear infinite;
+
+}
+
+/* npx tailwindcss -i ./src/css/master.css -o ./src/css/main.css --watch       */
+
+/* *************************************************** */
+
+.part2-sec1 {
+
+
+  animation: part2-sec1 8s linear infinite;
+}
+
+@keyframes part2-sec1 {
+  50% {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  55.111%,
+  95% {
+    transform: translateX(-150%);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.part2-sec2{
+  transform: translateX(-150%);
+animation: part2-sec2 8s linear infinite;
+}
+@keyframes part2-sec2 {
+  0%,50%{
+    transform: translateX(-150%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  55.111%,95%{
+ 
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/* **************************************************************** */
+
+/* npx tailwindcss -i ./src/css/master.css -o ./src/css/main.css --watch       */
+
+.part4-sec {
+  >figure {
+    >img {
+      transition: 5s
+    }
+  }
+}
+
+/* ************************************************* */
+
+
+
+/* ---------------profile----------------- */
+.box {
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 100;
+
+  /* border: 1px solid red; */
+  >div {
+      width: 100%;
+      height: 100%;
+      /* background-color: red; */
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      &:first-of-type {
+          background-color: rgb(0, 0, 0);
+          border-radius: 27% 73% 19% 81% / 75% 26% 74% 25%  ;
+          animation: anime2 infinite alternate 2s;
+
+      }
+
+      &:last-of-type {
+          background-image: url(../img/profit.jpg);
+          background-position: 0px -70px;
+          background-size: cover;
+          border-radius: 34% 66% 36% 64% / 59% 38% 62% 41%  ;
+          animation: anime1 infinite alternate 2s;
+      }
+  }
+  &:hover{
+      >a{
+          left: -50px;
+      }
+  }
+  >a{
+      position: absolute;
+      text-decoration: none;
+      font-size: 30px;
+      left: 100px;
+      transition: .4s;
+   &:nth-of-type(1){
+    top: 30px;
+    /* left: -10px; */
+    transition: 1s;
+   }
+      &:nth-of-type(2){
+        top: 70px;
+        transition: 1.5s;
+      }
+      &:nth-of-type(3){
+        top: 110px;
+        transition: 2s;
+      }
+  }
+}
+
+@keyframes anime1 {
+  to {
+      border-radius: 52% 48% 27% 73% / 43% 20% 80% 57%;
+  }
+}
+
+@keyframes anime2 {
+  to {
+      border-radius: 69% 31% 85% 15% / 16% 61% 39% 84%;
+  }
+}
+/* ---------------------------------------------------- */
